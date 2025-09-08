@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Databases and datasets
+*.db
+*.sqlite3
+*.csv
+
+# Logs
+*.log
+
+# OS / IDE specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #014421, #9dc183);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .result {
+            margin: auto;
+            margin-top: 80px;
+            width: 60%;
+            max-width: 600px;
+            padding: 30px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin: 15px 10px;
+            padding: 10px 25px;
+            background: black;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #333;
+        }
+        .dashboard-btn {
+            background: yellow;
+            color: black;
+            font-weight: bold;
+        }
+        .dashboard-btn:hover {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+        <h2>Prediction Result</h2>
+        <p><b>Prediction:</b> {{ prediction }}</p>
+        <p><b>Churn Probability:</b> {{ probability }}%</p>
+        <br>
+        <a href="/" class="btn">Back to Home</a>
+        <a href="/dashboard" class="btn dashboard-btn">View Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #014421, #9dc183); /* dark green to sage green */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: auto;
+            margin-top: 40px;
+            width: 90%;
+            max-width: 1000px;
+            padding: 30px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        label {
+            margin-right: 8px;
+        }
+        input[type="checkbox"], select, input[type="number"] {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background: #333; }
+
+        .dashboard-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: yellow;
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .dashboard-btn:hover {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+       
+
+        <form action="/predict" method="post">
+
+            <!-- First row checkboxes -->
+            <div class="form-row">
+                <label><input type="checkbox" name="SeniorCitizen" value="1"> Senior Citizen</label>
+                <label><input type="checkbox" name="Partner" value="Yes"> Partner</label>
+                <label><input type="checkbox" name="Dependents" value="Yes"> Dependents</label>
+                <label><input type="checkbox" name="PhoneService" value="Yes"> Phone Service</label>
+                <label><input type="checkbox" name="MultipleLines" value="Yes"> Multiple Lines</label>
+            </div>
+
+            <!-- Second row checkboxes -->
+            <div class="form-row">
+                <label><input type="checkbox" name="OnlineSecurity" value="Yes"> Online Security</label>
+                <label><input type="checkbox" name="OnlineBackup" value="Yes"> Online Backup</label>
+                <label><input type="checkbox" name="DeviceProtection" value="Yes"> Device Protection</label>
+                <label><input type="checkbox" name="TechSupport" value="Yes"> Tech Support</label>
+                <label><input type="checkbox" name="StreamingTV" value="Yes"> Streaming TV</label>
+                <label><input type="checkbox" name="StreamingMovies" value="Yes"> Streaming Movies</label>
+                <label><input type="checkbox" name="PaperlessBilling" value="Yes"> Paperless Billing</label>
+            </div>
+
+            <!-- Dropdowns in a row -->
+            <div class="form-row">
+                <label>Gender:
+                    <select name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </label>
+                <label>Internet Service:
+                    <select name="InternetService" required>
+                        <option value="DSL">DSL</option>
+                        <option value="Fiber optic">Fiber optic</option>
+                        <option value="No">No</option>
+                    </select>
+                </label>
+                <label>Contract:
+                    <select name="Contract" required>
+                        <option value="Month-to-Month">Month-to-Month</option>
+                        <option value="One year">One year</option>
+                        <option value="Two year">Two year</option>
+                    </select>
+                </label>
+                <label>Payment Method:
+                    <select name="PaymentMethod" required>
+                        <option value="Electronic check">Electronic check</option>
+                        <option value="Mailed check">Mailed check</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Credit card">Credit card</option>
+                    </select>
+                </label>
+            </div>
+
+            <!-- Numeric inputs in a row -->
+            <div class="form-row">
+            <!-- Numeric inputs in a row -->
+    <label>Monthly Charges: <input type="number" step="any" name="MonthlyCharges" required></label>
+    <label>Tenure (Months): <input type="number" name="tenure" required></label>
+
+
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <br>
+        <a href="/dashboard" class="dashboard-btn">View Dashboard</a>
+    </div>
+</body>
+</html>
