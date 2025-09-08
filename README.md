@@ -44,6 +44,17 @@ Identified key churn factors: contract type, tenure, monthly charges
 
 Reduced manual analysis effort with automated dashboards
 
+## 📸 Screenshots
+
+### Dashboard View
+![Dashboard](screenshots/dashboard.png)
+
+### Prediction Form
+![Prediction Form](screenshots/prediction_form.png)
+
+### Results Page
+![Results](screenshots/results.png)
+
 
 👩‍💻 Author
 
