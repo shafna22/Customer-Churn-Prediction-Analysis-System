@@ -47,13 +47,14 @@ Reduced manual analysis effort with automated dashboards
 ## 📸 Screenshots
 
 ### Dashboard View
-![Dashboard](screenshots/dashboard.png)
+[Dashboard](screenshots/dashboard.png)
+
 
 ### Prediction Form
-![Prediction Form](screenshots/prediction_form.png)
+[Prediction Form](screenshots/prediction_form.png)
 
 ### Results Page
-![Results](screenshots/results.png)
+[Results](screenshots/results.png)
 
 
 👩‍💻 Author
